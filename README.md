@@ -1,3 +1,5 @@
+# Hosted on https://andreibtc84.github.io/react-dice-app/
+
 # Task 0
 
 Create a Dice app.
