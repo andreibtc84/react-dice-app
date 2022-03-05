@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Dice } from "./components/Dice";
+import { useState } from "react";
+import { RollLog } from "./components/RollLog";
 
 function App() {
+  const [rollLog, setRollLog] = useState(["Not rolled yet"]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Dice App</h1>
+      <Dice rollLog={rollLog} setRollLog={setRollLog} side={"1d6"} max={6} />
+      <Dice rollLog={rollLog} setRollLog={setRollLog} side={"1d10"} max={10} />
+      <Dice rollLog={rollLog} setRollLog={setRollLog} side={"1d20"} max={20} />
+      <h1>You Rolled:</h1>
+      <RollLog rollLog={rollLog} />
     </div>
   );
 }
