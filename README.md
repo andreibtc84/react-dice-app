@@ -1,4 +1,4 @@
-# Hosted on https://andreibtc84.github.io/react-dice-app/
+Hosted on https://andreibtc84.github.io/react-dice-app/
 
 # Task 0
 
