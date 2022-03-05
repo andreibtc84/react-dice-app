@@ -2,6 +2,7 @@ import "./App.css";
 import { Dice } from "./components/Dice";
 import { useState } from "react";
 import { RollLog } from "./components/RollLog";
+import { AddDie } from "./components/AddDie";
 
 function App() {
   const [rollLog, setRollLog] = useState(["Not rolled yet"]);
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <h1>Dice App</h1>
+      <AddDie />
       <Dice
         rollLog={rollLog}
         setRollLog={setRollLog}
