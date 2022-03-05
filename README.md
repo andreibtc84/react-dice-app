@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Task 0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create a Dice app.
 
-## Available Scripts
+It should have a button. On click, the button will roll a number between 1 and 6.
 
-In the project directory, you can run:
+The number rolled should be displayed below it. Every time the button is clicked, it should add the number to the output, or log of clicks, in a new p tag going from most recent roll at the top to least recent at the bottom.
 
-### `npm start`
+A button that says Roll 1d6 and has a log of the previous rolls beneath it
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Task 1
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Make a Dice/Die component that has a button and takes the number of sides on a die (singular for dice) as a number.
 
-### `npm test`
+When you click the button, it will calculate a random number; the number must be between 1 and the value of the dice (a roll).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Use this dice component in a parent component (e.g. App). Every time one of the dice buttons is clicked, add the result to state, and display each result as a p tag on the page (like the screenshot).
 
-### `npm run build`
+App with buttons representing dice, with numbers underneath the buttons representing rolls
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Task 1.1
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you haven't already, make the p tags with the rolls their own component (Output or RollLog would be good names).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Task 2
 
-### `npm run eject`
+Make a number input with a button, to add a new value of die.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+When the user clicks the button, the Dice App should add another Dice component, that has the number of sides the user put in the input.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If there is no value in the input, do not add a Dice button.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Same image as above, with a form for adding an additional dice
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Task 3
 
-## Learn More
+When the user has clicked the "Add a die", clear the value in the form, so that the user does not have to backspace to add another value.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Task 4
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+If a dice of that value already exists, do not show duplicate buttons.
 
-### Code Splitting
+# Task 5
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Add a "Clear log" button at the top of the p tags with the rolls. If there are no rolls, do not show the button.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Form and buttons as above, with a Clear Log button
